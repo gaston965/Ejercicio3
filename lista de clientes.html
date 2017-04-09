@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estado de Clientes</title>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <script src="validacion.js"></script> 
+ <!-- <link rel="stylesheet" href="validacion.css"> -->
+
+
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"
+    ></script>
+
+
+
+
+    <script type="text/javascript" src="sorttable.js"></script>
+</head>
+<body>
+	<header >
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+ 
+  <div class="navbar-header">
+    <a  class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+      <a class="navbar-brand" href="#">
+            <div style="width: 110px; margin-top: 25px;margin-bottom: 25px;">
+                        <a href="index.xhtml">     <img src="emi.jpg" title="Instituto NG" style="margin-left:20em ;
+                        width:83px; height: 83px; margin-top: -100px; "/> </a> 
+                    </div> 
+                    
+                    <div id="titulo" class="text-center" style=" font-size: small; margin-top: -4.2em;  margin-left: 5.3em; color: #000000;">
+                       
+                    </div>
+                    
+                    <div id="titulo" class="text-center" style=" font-size: medium; margin-top: 0.0em; margin-left: 5.3em; color: #000000;">
+                       
+                    </div>
+                    
+                    <div id="subtitulo" class="text-center" style=" font-size: smaller ; margin-top: -0.4em; margin-left: 6.0em; color: #000000">
+                        <small></small>
+                    </div>
+          
+          
+          
+          
+      </a>
+  </div>
+ 
+  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+       otro elemento que se pueda ocultar al minimizar la barra -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse" style="margin-left: 22em">
+            <ul class="nav navbar-nav navbar-right">
+     
+              
+                
+                
+      
+    </ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     <ul class="nav navbar-nav navbar-right" style="margin-right: 18em">
+        
+       
+          <li class=""><a  href="lista de clientes.html"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+          <li><a href="nuevoCliente.html"  ><i class="glyphicon glyphicon-usd"> </i>Nuevo Cliente</a></li>
+          <li><a href="Carga de credito.html"  ><i class="glyphicon glyphicon-usd"> </i>Datos Personales de Clientes</a></li>
+         
+           <li><a href="Terminar Estacionamiento.html" ><i class="glyphicon glyphicon-warning-sign"></i> </a></li>
+          
+          <li><a href="#" data-toggle="modal" data-target="#Salir" ><i class="glyphicon glyphicon-log-out"></i> Salir</a></li>
+     
+    </ul>
+ 
+    
+ 
+
+  </div>
+</nav>
+
+
+
+
+	</header>
+	<nav>
+		
+
+
+
+
+
+
+	</nav>
+
+
+
+    <section style="margin-top: 10em" class="container">
+
+     <center><h1>Estado de Clientes</h1></center> 
+
+	<table cellspacing="1" class=" table table-bordered sortable">             
+    <thead>
+        <tr> 
+            <th>Codigo de Cliente</th> 
+            <th>Apellido y nombre</th> 
+           
+            <th>Condicion</th> 
+            <th>Saldo</th>
+            <th>Zona Geografica</th> 
+            <th>Datos Personales</th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        <tr> 
+            <td>00</td> 
+            <td>Barrios Canteros Gaston Ezequiel</td> 
+            <td><select>
+  <option value="Deudor">Deudor</option>
+  <option value="No Deudor">No Deudor</option>
+  
+</select></td> 
+            <td>00.00</td>
+            <td>Puerto Vilelas</td> 
+            
+            <td><div class="btn-group">
+  <a  class="btn btn-primary" href="modificarCliente.html">Modificar</a>
+  <a  class="btn btn-danger">Eliminar</a>
+  
+</div></td>
+        </tr> 
+        <tr> 
+            <td>01</td> 
+            <td>Bianconi Franco</td> 
+            <td><select>
+  <option value="Deudor">Deudor</option>
+  <option value="No Deudor">No Deudor</option>
+  
+</select></td> 
+<td>00.00</td>
+            <td>Gran Resistencia</td> 
+            
+            <td><div class="btn-group">
+  <a  class="btn btn-primary">Modificar</a>
+  <a  class="btn btn-danger">Eliminar</a>
+ 
+</div></td>
+        </tr> 
+        <tr> 
+            <td>02</td> 
+            <td>Montoya Nicolas</td> 
+           <td><select>
+  <option value="Deudor">Deudor</option>
+  <option value="No Deudor">No Deudor</option>
+  
+</select></td> <td>00.00</td>
+            <td>Gran Resistencia</td> 
+            
+            <td><div class="btn-group">
+  <a  class="btn btn-primary">Modificar</a>
+  <a  class="btn btn-danger">Eliminar</a>
+ 
+</div></td>
+        </tr> 
+        <tr> 
+            <td>03</td> 
+            <td>Romero Nicolas</td> 
+           <td><select>
+  <option value="Deudor">Deudor</option>
+  <option value="No Deudor">No Deudor</option>
+  
+</select></td> <td>00.00</td>
+            <td>Gran Resistencia</td> 
+            
+            <td> <div class="btn-group">
+  <a  class="btn btn-primary">Modificar</a>
+  <a  class="btn btn-danger">Eliminar</a>
+  </div>
+            </td>
+        </tr> 
+        <tr> 
+            <td>04</td> 
+            <td>Ibarra Valeria</td> 
+           <td><select>
+  <option value="Deudor">Deudor</option>
+  <option value="No Deudor">No Deudor</option>
+  
+</select></td> <td>00.00</td>
+            <td>Corrientes</td> 
+            <td><div class="btn-group">
+  <a  class="btn btn-primary">Modificar</a>
+  <a  class="btn btn-danger">Eliminar</a>
+  
+</div></td>
+            
+        </tr> 
+        <tr> 
+            <td>05</td> 
+            <td>Medina Gaston</td> 
+           <td><select>
+  <option value="Deudor">Deudor</option>
+  <option value="No Deudor">No Deudor</option>
+  
+</select></td> <td>00.00</td>
+            <td>Corrientes</td> 
+            <td><div class="btn-group">
+  <a  class="btn btn-primary">Modificar</a>
+  <a  class="btn btn-danger">Eliminar</a>
+ 
+</div></td>
+            
+        </tr> 
+
+
+    </tbody> 
+</table>
+</section>
+ <footer id="pie"><hr> <center><p style="color:#2E83D9">Desarrollado por Grupo 9© Software 2017- Derechos Reservados</p></center></hr></footer>							       
+          
+
+</body>
+</html>
