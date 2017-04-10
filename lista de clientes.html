@@ -54,6 +54,43 @@ window.addEventListener('DOMContentLoaded', function() {
 
     </script>
 
+
+    <script language="javascript">
+		function doSearch()
+		{
+			var tableReg = document.getElementById('datos');
+			var searchText = document.getElementById('searchTerm').value.toLowerCase();
+			var cellsOfRow="";
+			var found=false;
+			var compareWith="";
+ 
+			// Recorremos todas las filas con contenido de la tabla
+			for (var i = 1; i < tableReg.rows.length; i++)
+			{
+				cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+				found = false;
+				// Recorremos todas las celdas
+				for (var j = 0; j < cellsOfRow.length && !found; j++)
+				{
+					compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+					// Buscamos el texto en el contenido de la celda
+					if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+					{
+						found = true;
+					}
+				}
+				if(found)
+				{
+					tableReg.rows[i].style.display = '';
+				} else {
+					// si no ha encontrado ninguna coincidencia, esconde la
+					// fila de la tabla
+					tableReg.rows[i].style.display = 'none';
+				}
+			}
+		}
+	</script>
+
 </head>
 <body>
 	<header >
@@ -148,8 +185,32 @@ window.addEventListener('DOMContentLoaded', function() {
     <section style="margin-top: 10em" class="container">
 
      <center><h1>Estado de Clientes</h1></center> 
+      <form>
+		<!-- <label class="col-md-1 control-label">Cliente :</label> 
+        <div class="col-md-10">
+		<input class="form-control" id="searchTerm" type="text" onkeyup="doSearch()" />
+	    </div> -->
+	    <div class="form-group col-sm-10" style="margin-left: 13em" >
+                                    
+                                    <label class="col-sm-1 control-label"> Cliente </label>  
+                                           <div class="col-sm-9">     
+                                               <div class="input-group ">
+               <!--                                    <h:form>-->
+                                                       <input class="form-control" id="searchTerm" type="text" onkeyup="doSearch()" />
+                                                       <span class="input-group-btn"> 
+                                                           <button  type="submit"  jsf:action="#{busquedasController.doBuscarAlumno()}"  class="btn btn-primary "   title="Busqueda gral"> <i class="glyphicon glyphicon-search"></i> </button>
 
-	<table cellspacing="1" class="table table-bordered sortable"   >             
+                                                       </span >
+
+               <!--                                   </h:form>-->
+                                               </div>
+
+                                           </div>
+                                       </div> 
+      
+	</form>
+	<p>
+	<table cellspacing="1"  id="datos" class="table  table-bordered sortable"   >             
     <thead>
         <tr> 
             <th>Codigo de Cliente</th> 
@@ -282,6 +343,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     </tbody> 
 </table>
+</p>
 </section>
  <footer id="pie"><hr> <center><p style="color:#2E83D9">Desarrollado por Grupo 9© Software 2017- Derechos Reservados</p></center></hr></footer>							       
         
